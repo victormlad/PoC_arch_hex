@@ -1,10 +1,9 @@
 from app.device_use_cases import device
-from app.domain.devicerepo import DeviceRepo
 
 
 class Api:
     def __init__(self):
-        self.device_repo = device_repo
+        pass
 
     def get_all_devices(self):
         devices = device.get_all()
@@ -20,20 +19,17 @@ class Api:
 
     def device_update(self, device_id, changes):
         dev = device.get_by_id(device_id)
-        
-
 
 
 api = None
-device_repo = DeviceRepo()
 
 
-def start():
-    global api
-
-    api = Api()
-    return api
-
-
-def get_api():
-    return api
+# def start():
+#     global api
+#
+#     api = Api()
+#     return api
+#
+#
+# def get_api():
+#     return api
